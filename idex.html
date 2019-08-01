@@ -5,8 +5,13 @@
         <script type="text/javascript" src = "script.js"></script>
     </head>
     <body>
-        <div id = "listOfPlaces"></div>
-        <form>
+        <table id = "listOfPlaces">
+            <tr>
+                <th>Distance (miles)</th>
+                <th>Price (£)</th>
+            </tr>
+        </table>
+        <form onsubmit="return false">
             <input type="text" id = "distanceInputBox" id = "distance" />
             <button id = "distanceSubmit"> submit </button>
         </form>

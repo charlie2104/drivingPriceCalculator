@@ -13,9 +13,9 @@ window.onload = function()
 
     document.getElementById('distanceSubmit').onclick = function()
     {
-        distace = document.getElementById('distanceInputBox').value;
-        costOfJourney = calculatePrice(distace);
-        outputDiv = document.getElementById("listOfPlaces");
-        outputDiv.innerHTML += costOfJourney + "<br />";
+        distance = document.getElementById('distanceInputBox').value;
+        costOfJourney = calculatePrice(distance);
+        outputTable = document.getElementById("listOfPlaces");
+        outputTable.innerHTML += "<tr><th>" + distance + "</th><th>" + costOfJourney + "</th></tr>";
     }
 }
