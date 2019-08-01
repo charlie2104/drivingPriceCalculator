@@ -1,14 +1,20 @@
 window.onload = function()
 {
-    document.getElementById('distanceSubmit').onclick = function()
+
+    function calculatePrice(distance)
     {
-        console.log("hello")
         mpg = 40;
         petrolPriceL = 1.27;
-        distance = document.getElementById('distanceInputBox').value;
         petrolPriceG = petrolPriceL * 3.785;
         gallonsUsed = distance/mpg;
         costOfJourney = gallonsUsed * petrolPriceG;
+        return costOfJourney;
+    }
+
+    document.getElementById('distanceSubmit').onclick = function()
+    {
+        distace = document.getElementById('distanceInputBox').value;
+        costOfJourney = calculatePrice(distace);
         alert(costOfJourney);
     }
 }
