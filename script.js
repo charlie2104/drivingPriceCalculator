@@ -1,11 +1,14 @@
-mpg = 40;
-petrolPriceL = 1.27;
-
-distance = prompt("how far in miles did you go");
-
-petrolPriceG = petrolPriceL * 3.785;
-gallonsUsed = distance/mpg;
-
-costOfJourney = gallonsUsed * petrolPriceG;
-
-alert(costOfJourney);
+window.onload = function()
+{
+    document.getElementById('distanceSubmit').onclick = function()
+    {
+        console.log("hello")
+        mpg = 40;
+        petrolPriceL = 1.27;
+        distance = document.getElementById('distanceInputBox').value;
+        petrolPriceG = petrolPriceL * 3.785;
+        gallonsUsed = distance/mpg;
+        costOfJourney = gallonsUsed * petrolPriceG;
+        alert(costOfJourney);
+    }
+}
