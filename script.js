@@ -8,13 +8,14 @@ window.onload = function()
         petrolPriceG = petrolPriceL * 3.785;
         gallonsUsed = distance/mpg;
         costOfJourney = gallonsUsed * petrolPriceG;
-        return costOfJourney;
+        return Math.round((costOfJourney + 0.00001) * 100) / 100 //rounds to 2dp
     }
 
     document.getElementById('distanceSubmit').onclick = function()
     {
         distace = document.getElementById('distanceInputBox').value;
         costOfJourney = calculatePrice(distace);
-        alert(costOfJourney);
+        outputDiv = document.getElementById("listOfPlaces");
+        outputDiv.innerHTML += costOfJourney + "<br />";
     }
 }
